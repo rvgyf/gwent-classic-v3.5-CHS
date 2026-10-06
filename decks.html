@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang = "zh-CN">
+	<head>
+		<title>昆特牌 v3.5 - 卡组</title>
+		<meta charset = "utf-8" />
+		<meta name = "author" content = "Sundaram, Costa, Sylver & Iván Mtz" />
+		<meta name = "description" content = "在浏览器中畅玩《巫师 3》中的经典昆特牌小游戏！包含《石之心》与《血与酒》的卡牌！" />
+		<meta name = "keywords" content = "arun, sundaram, reynolds, costa, randompianist, sylver, romain, durban, programmer, gwent, tw3, witcher, card, game, gamedev, play" />
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+		<link rel = "icon" type = "image/x-icon" href = "images/favicon.ico" />
+		<link rel = "stylesheet" type = "text/css" href = "css/rules.css" />
+		<link rel = "stylesheet" type = "text/css" href = "css/pure.min.css" />
+		<script type = "text/javascript" language = "JavaScript" src = "javascript/rules.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "javascript/decks.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "javascript/cards.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "javascript/abilities.js"></script>
+	</head>
+	<body>
+		<div id = "layout">
+			<a href = "#menu" id = "menuLink" class = "menu-link">
+				<span></span>
+			</a>
+			<div id = "menu">
+				<div class = "pure-menu">
+					<a class = "pure-menu-heading" href = "">昆特牌 v3.5</a>
+					<ul class = "pure-menu-list">
+						<li class = "pure-menu-item menu-other-page">
+							<a href = "index.html" class = "pure-menu-link">开始游戏</a>
+						</li>
+						<li class = "pure-menu-item menu-other-page">
+							<a href = "rules.html" class = "pure-menu-link">规则</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#realms" class = "pure-menu-link">北方领域</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#nilfgaard" class = "pure-menu-link">尼弗迦德帝国</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#monsters" class = "pure-menu-link">怪物</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#scoiatael" class = "pure-menu-link">松鼠党</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#skellige" class = "pure-menu-link">史凯利格</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#witcher_universe" class = "pure-menu-link">猎魔人宇宙</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#toussaint" class = "pure-menu-link">陶森特</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#lyria_rivia" class = "pure-menu-link">莱里亚与利维亚</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#syndicate" class = "pure-menu-link">辛迪加</a>
+						</li>
+						<li class = "pure-menu-item">
+							<a href = "#zerrikania" class = "pure-menu-link">泽瑞坎尼亚</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id = "main">
+				<div class = "header">
+					<h1>昆特牌 v3.5</h1>
+					<h2>把《巫师 3》的小游戏搬到浏览器里，并进一步发扬光大</h2>
+				</div>
+				<div class = "content">
+					<h2 class = "content-subhead" id = "setup">在昆特牌中构筑卡组</h2>
+					<p>
+						昆特牌最初就是一款卡组构筑游戏。如今，要让昆特牌在两位真人玩家之间有趣且可玩，最大的难题就是……构筑卡组。没开玩笑。
+					</p>
+					<p>
+						在《巫师 3》中，目标是构筑出最强、最不平衡的卡组。当然，玩家想赢，而电脑也不会抱怨自己老是输。
+						<br />
+						结果就是，有一些明显的必胜卡组，例如使用尼弗迦德或北方领域作为阵营，塞进大量间谍、医疗兵和诱饵。
+						<br />
+						这样的卡组玩起来很无聊，尤其是作为多人对战，所以我们想跳出这个死胡同，在现有游戏的基础上做出更有趣的东西。
+					</p>
+					<p>
+						首先，我们要接受一个事实：为了更愉快的对局，卡组必须更弱一些。它们必须少一些超模牌，为真正的策略留出更多空间。
+						<br />
+						目标不再是 100% 胜率，而是每一局都能玩得开心。
+					</p>
+					<p>
+						关于如何构成一副平衡且有趣的卡组，目前还没有共识。网上能找到各种讨论，但大多数都建议使用抽牌法，或者其变体。
+						<br />
+						基本的思路是这样的：
+						<ul>
+							<li>
+								选择一个阵营（也可以随机）
+							</li>
+							<li>
+								选择一个领袖（也可以随机）
+							</li>
+							<li>
+								<b>现在按如下方式构筑你的卡组（或者用你自己的变体）：</b>
+							</li>
+							<li>
+								洗牌
+							</li>
+							<li>
+								抽 3 张牌。保留 1 张，弃掉其他 2 张（变体：也可以保留 2 张，但限制次数）
+							</li>
+							<li>
+								重复此过程，直到你有至少 22 张单位牌和最多 10 张特殊牌。
+							</li>
+						</ul>
+					</p>
+					<p>
+						为了更平衡，建议再加上一些限制，例如：
+						<ul>
+							<li>
+								每副卡组最多 5 张英雄。
+							</li>
+							<li>
+								每副卡组最多 2 张间谍。
+							</li>
+						</ul>
+					</p>
+					<h2 class = "content-subhead" id = "setup">我们的做法</h2>
+					<p>
+						上述方法有一个优点——它增加了多样性，因为卡组构筑本身带有一些不确定性。
+						<br />
+						你不太可能连续几次遇到同一副卡组。
+						<br />
+						但我们看到了几个不喜欢的大缺点：
+						<ul>
+							<li>
+								一遍又一遍地构筑卡组很慢。除非你享受逐步构筑新卡组的乐趣，否则这就是浪费时间。
+							</li>
+							<li>
+								你不太可能构建出一副拥有特定打法的强力卡组。
+							</li>
+							<li>
+								最终结果会是一堆随机混合的卡牌，与《巫师》宇宙的联系非常有限。
+							</li>
+						</ul>
+					</p>
+					<p>
+						<b>因此，我们按照以下方法和心态构建了一套卡组：</b>
+						<ul>
+							<li>
+								卡组必须与《巫师》宇宙的某一部分保持一致。
+							</li>
+							<li>
+								卡组应该尽量拥有独特的打法，至少也要与大多数卡组不同。
+							</li>
+							<li>
+								卡组最好有 5 张英雄，上下浮动 1 张。
+							</li>
+							<li>
+								卡组最好有 22 到 30 张单位牌（含英雄）。
+							</li>
+							<li>
+								卡组最好有 5 到 10 张特殊牌，通常在 7 张左右。
+							</li>
+							<li>
+								卡组的权重应与其他卡组保持平衡（在我们的方法中通常介于 270 到 300 之间）。
+							</li>
+							<li>
+								一个角色最好只出现在一副卡组中。
+							</li>
+						</ul>
+					</p>
+					<h2 class = "content-subhead" id = "setup">等等，你刚说权重？</h2>
+					<p>
+						是的，我们平衡卡组的主要方法其实与现代昆特牌游戏类似。
+						<br />
+						我们尝试为每张卡（特殊牌除外）计算一个权重，类似于现代昆特牌中的「资源」值。
+					</p>
+					<p>
+						别被吓到！就像经典昆特牌 v3.5 因为技能更少而更简单一样，它不需要精确调整每张牌的权重。
+						<br />
+						基本思路是：基于卡牌的技能，统计估算它的强度潜力。这并不容易对每个技能都做到，但我们尽量做了合理的估计。
+						<br />
+						以下是主要原则：
+						<ul>
+							<li>
+								一张战力为 7 的普通单位牌权重就是 7。很简单，打出它就给总分加 7。当然这可能被改变（变好或变坏），但这不是重点。
+							</li>
+							<li>
+								另一方面，一张战力 10 的英雄也能加 10 分，但它无法被改变。我们决定给英雄乘一个 2 的系数，所以这张英雄的权重是 20。这是最棘手的一部分——是否受技能影响。不过既然大多数英雄的战力都差不多（大约 10），而且如果每副卡组的英雄数量差不多，这个系数对平衡/总权重其实没有太大影响。
+							</li>
+							<li>
+								在讨论其他技能权重之前，我们需要先跳到结论来证明一些选择。
+								我们发现，总体来看，卡牌的平均权重（含英雄）大约是 10。去掉英雄后大约是 8。这就给了我们一个关于卡牌平均价值/潜力的参考。
+							</li>
+							<li>
+								让我们从臭名昭著的间谍技能开始。它给你 2 张牌，但会给敌人一些战力，所以权重是
+								<code>(2*10) - spy_strength</code>
+								（10 是卡牌的平均权重）。
+							</li>
+							<li>
+								类似地，医疗兵会复活一张平均权重为 8 的单位牌（非英雄）。不过其中一些单位无法使用它们的技能（例如集结），所以我们把权重定为
+								<code>7 + medic_strength</code>。
+							</li>
+							<li>
+								集结和紧密羁绊：这两个稍微棘手一点，因为它们以「组」为单位发挥作用。你有多张同名卡牌，但它们的潜力在使用得当时变化很大。
+								<br />
+								实际潜力还取决于可用副本的数量。
+								<br />
+								简而言之，我们决定给两者都乘以 2。这简化了它们的行为，但对这两个技能的概率分析表明，与一张普通卡牌被打出相比，这些技能的效果大约能把潜力翻倍。
+							</li>
+							<li>
+								我们不会详细讨论其他技能，因为它们更多是猜测（非常依赖具体情境）。大多数其他技能都会附加 5 的权重（加到单位战力上），比如焦炎、士气鼓舞或召唤复仇者。
+								<br />
+								主要的例外是指挥官之角，它的附加权重是 10。我们还决定给灵活卡牌附加 2 的权重，因为它们有在两个排中选一个打出的选项。
+							</li>
+							<li>
+								目前，所有领袖默认权重都是 20。我们还没有花时间去微调它们。
+							</li>
+						</ul>
+					</p>
+					<p>
+						现实地说，这不是精确的科学，也不完美。
+						<br />
+						但你自己试试就会发现，它已经足以显示出一副卡组是明显更强（比如塞进一堆紧密羁绊牌）还是非常弱。
+						<br />
+						我们相信它已经足够好用，能让我们得到潜力相当的卡组。测试结果也不错。
+					</p>
+					<p>
+						基于以上所有考虑，我们设计了一套卡组选择，我们认为它们既忠实于《巫师》宇宙，又玩起来很有趣。
+					</p>
+					<h2 class = "content-subhead" id = "decks">卡组推荐</h2>
+					<p>
+						想了解这些卡组的具体内容，启动游戏去查看它们吧！
+					</p>
+					<a id = "realms" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/realms_foltest_lord.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-realms">北方领域 - 泰莫利亚</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["nr_foltest_lord"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[0]) + "（" + premade_deck[0].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["foltest_lord"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕紧密羁绊、间谍和攻城牌展开。
+								</p>
+								<p>
+									这副卡组主要使用来自泰莫利亚领域的单位和角色，包括蓝衣铁卫。
+									<br />
+									间谍单位能提高抽到紧密羁绊单位的机会。你也能拥有一批可靠的攻城单位。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/realms_foltest_siegemaster.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-realms">北方领域 - 亚甸与科德温</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["nr_foltest_siegemaster"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[1]) + "（" + premade_deck[1].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["foltest_siegemaster"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕紧密羁绊、士气鼓舞和攻城牌展开。
+								</p>
+								<p>
+									这副卡组主要使用来自亚甸和科德温领域的单位和角色。
+									<br />
+									它拥有大量优秀的攻城单位（其中几张带紧密羁绊），还能通过攻城排上的多个士气鼓舞进一步强化。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/realms_queen_calanthe.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-realms">北方领域 - 辛特拉</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["nr_queen_calanthe"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[2]) + "（" + premade_deck[2].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["queen_calanthe"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结、辛特拉大屠杀和召唤复仇者展开。
+								</p>
+								<p>
+									这副卡组主要使用来自辛特拉领域以及一些周边小国（如克拉科、西达里斯）的单位和角色。
+									<br />
+									由于埃斯特·图尔塞克的存在，它还带来了史凯利格舰队的威力。
+									<br />
+									这副卡组的设计思路是突出辛特拉的大屠杀与重生，因此技能选择也围绕这一点。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/realms_radovid_ruthless.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-realms">北方领域 - 瑞达尼亚</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["nr_radovid_ruthless"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[3]) + "（" + premade_deck[3].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["radovid_ruthless"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕间谍、医疗兵和高战力单位展开。
+								</p>
+								<p>
+									这副卡组主要使用来自瑞达尼亚领域的单位和角色。
+									<br />
+									它的许多高战力单位能和间谍、医疗兵配合得很好。你还可以尝试组合科林弗利德屠龙者。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "nilfgaard" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/nilfgaard_emhyr_relentless.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-nilfgaard">尼弗迦德帝国 - 军团</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["ne_emhyr_relentless"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[4]) + "（" + premade_deck[4].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["emhyr_relentless"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕间谍、医疗兵、指挥官之角和少量紧密羁绊展开。
+								</p>
+								<p>
+									这副卡组主要使用尼弗迦德帝国的军团单位。
+									<br />
+									它旨在表现尼弗迦德军队的庞大规模，因此卡牌数量较多。
+									<br />
+									大量医疗兵和少量间谍能让你在战场上投入更多单位，再通过可用的指挥官之角进一步放大。
+									<br />
+									它的英雄数量比通常多一些，但其中一些英雄牌很弱。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/nilfgaard_emhyr_emperor.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-nilfgaard">尼弗迦德帝国 - 贵族</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["ne_emhyr_emperor"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[5]) + "（" + premade_deck[5].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["emhyr_emperor"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕间谍和紧密羁绊展开。
+								</p>
+								<p>
+									这副卡组主要使用尼弗迦德帝国的贵族和显贵。
+									<br />
+									它旨在表现帝国的宫廷及其种种阴谋。
+									<br />
+									大量的间谍能让因佩拉卫队发挥极大作用。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/nilfgaard_emhyr_invader_of_the_north.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-nilfgaard">尼弗迦德帝国 - 第二军团</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["ne_emhyr_invader_of_the_north"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[6]) + "（" + premade_deck[6].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["emhyr_invader"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结、焦炎、医疗兵和间谍展开。
+								</p>
+								<p>
+									这副卡组使用尼弗迦德帝国的其他军团单位。
+									<br />
+									与另一副军团卡组不同，这副卡组加入了一些集结和焦炎，对「人海」的依赖较少。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "monsters" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/monsters_eredin_bringer_of_death.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-monsters">怪物 - 狂猎与巨人</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["mo_eredin_bringer_of_death"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[7]) + "（" + premade_deck[7].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["eredin_bringer_of_death"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和高战力单位展开。
+								</p>
+								<p>
+									这副卡组主要使用与狂猎相关的卡牌，以及一些巨型怪物。
+									<br />
+									虽然主要特色是近战单位的集结，但它也拥有不错的攻城单位。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/monsters_eredin_commander.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-monsters">怪物 - 野兽与生物</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["mo_eredin_commander"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[8]) + "（" + premade_deck[8].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["eredin_commander"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕大量集结单位展开。
+								</p>
+								<p>
+									这副卡组主要使用《巫师》宇宙中种类繁多的怪物——体型较小但数量更多的那种。
+									<br />
+									这副卡组严重依赖大量集结，主要集中在近战排。这也是它比通常卡牌更多的原因。
+									<br />
+									它能迅速铺场，但打牌必须谨慎，因为很容易耗尽你的集结牌。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "scoiatael" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/scoiatael_francesca_daisy.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-scoiatael">松鼠党 - 突击队</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sc_francesca_daisy"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[9]) + "（" + premade_deck[9].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["francesca_daisy"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用松鼠党的非人类游击战士。
+									<br />
+									它主要依靠集结，配合数量可观的医疗兵。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/scoiatael_francesca_beautiful.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-scoiatael">松鼠党 - 独立领地</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sc_francesca_beautiful"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[10]) + "（" + premade_deck[10].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["francesca_beautiful"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和士气鼓舞单位展开。
+								</p>
+								<p>
+									这副卡组主要使用更和平的非人类领地，如布洛克莱昂、多尔·布雷坦纳和玛哈坎。
+									<br />
+									它依靠集结与士气鼓舞的组合。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "skellige" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/skellige_crach_an_craite.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-skellige">史凯利格 - 大史凯利格与斯瓦勃罗德</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sk_crach_an_craite"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[11]) + "（" + premade_deck[11].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["crach_an_craite"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕狂战士、集结和紧密羁绊单位展开。
+								</p>
+								<p>
+									这副卡组主要使用史凯利格主岛大史凯利格及其上的两个氏族（安·克莱特族和德拉蒙德族），以及斯瓦勃罗德教派。
+									<br />
+									这副卡组主打狂战士/曼陀罗技能，辅以一些紧密羁绊和一次非常强力的集结。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/skellige_king_bran.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-skellige">史凯利格 - 小岛</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sk_king_bran"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[12]) + "（" + premade_deck[12].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["king_bran"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结、紧密羁绊和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用史凯利格其他小岛及其上的氏族。
+									<br />
+									它依靠紧密羁绊与集结单位的良好组合，并辅以数量可观的医疗兵。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "witcher_universe" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/witcher_universe_vilgefortz_magician_kovir.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-witcher_universe">猎魔人宇宙 - 战士与法师</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["wu_vilgefortz_magician_kovir"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[13]) + "（" + premade_deck[13].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["vilgefortz_magician_kovir"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用《巫师》宇宙中一些著名的战士与法师，他们并不依附于某个特定领域。
+									<br />
+									它主要依靠集结和医疗兵单位。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/witcher_universe_cosimo_malaspina.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-witcher_universe">猎魔人宇宙 - 猎魔人</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["wu_cosimo_malaspina"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[14]) + "（" + premade_deck[14].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["cosimo_malaspina"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕猎魔人学派、坚韧和焦炎展开。
+								</p>
+								<p>
+									这副卡组主要使用真正的猎魔人及其学派。
+									<br />
+									它使用一套特殊技能，鼓励把同一学派的猎魔人连同他们的要塞一起打出。
+									<br />
+									除了常规的特殊牌，它还引入了拥有独特技能的法印。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/witcher_universe_alzur_maker.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-witcher_universe">猎魔人宇宙 - 恶魔与生物</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["wu_alzur_maker"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[15]) + "（" + premade_deck[15].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["alzur_maker"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结、焦炎和间谍单位展开。
+								</p>
+								<p>
+									这副卡组主要使用《巫师》宇宙中一些罕见的生物和恶魔，包括《石之心》中的角色。
+									<br />
+									它主要依靠集结和焦炎单位，并辅以一些间谍和整体强力单位。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/witcher_universe_vilgefortz_sorcerer.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-witcher_universe">猎魔人宇宙 - 杰洛特与朋友</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["wu_vilgefortz_sorcerer"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[16]) + "（" + premade_deck[16].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["vilgefortz_sorcerer"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕召唤复仇者和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用利维亚的杰洛特、他的亲密朋友以及《巫师》宇宙中各种盟友。
+									<br />
+									召唤复仇者是这副卡组的重要部分——罗奇和凯尔派能召唤杰洛特和希里。
+									<br />
+									与医疗兵单位结合后，它能变得非常强大。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "toussaint" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/toussaint_anna_henrietta_duchess.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-toussaint">陶森特 - 骑士与贵族</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["to_anna_henrietta_duchess"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[17]) + "（" + premade_deck[17].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["anna_henrietta_duchess"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕紧密羁绊、集结和高战力单位展开。
+								</p>
+								<p>
+									这副卡组主要使用陶森特的骑士与贵族。
+									<br />
+									它由大量强力单位构成，其中一些带紧密羁绊——如果放任不管，会变得非常强。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/toussaint_anna_henrietta_ladyship.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-toussaint">陶森特 - 怪物与吸血鬼</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["to_anna_henrietta_ladyship"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[18]) + "（" + premade_deck[18].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["anna_henrietta_ladyship"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和高战力单位展开。
+								</p>
+								<p>
+									这副卡组主要使用陶森特的怪物与吸血鬼。
+									<br />
+									它由大量强力单位构成，辅以一些集结单位，是一套非常有韧性的组合。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "lyria_rivia" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/lyria_rivia_meve_princess.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-lyria_rivia">莱里亚与利维亚 - 前锋</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["lr_meve_princess"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[19]) + "（" + premade_deck[19].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["meve_princess"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕集结和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用莱里亚与利维亚军队的前锋（近战与远程单位的混合）。
+									<br />
+									它由一批集结单位组成，并由医疗兵支援。护盾特殊牌让集中在一起的集结单位拥有极大的潜力。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/lyria_rivia_meve_white_queen.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-lyria_rivia">莱里亚与利维亚 - 后卫</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["lr_meve_white_queen"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[20]) + "（" + premade_deck[20].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["meve_white_queen"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕焦炎、间谍和医疗兵单位展开。
+								</p>
+								<p>
+									这副卡组主要使用莱里亚与利维亚军队的后卫（远程与攻城单位的混合）。
+									<br />
+									它由一批远程与攻城单位组成，拥有多种特殊牌与医疗兵配合。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "syndicate" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/syndicate_cyrus_hemmelfart.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-syndicate">辛迪加 - 永恒圣火教会</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sy_cyrus_hemmelfart"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[21]) + "（" + premade_deck[21].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["cyrus_hemmelfart"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕猎巫、集结和二聚魔法展开。
+								</p>
+								<p>
+									这副卡组主要使用永恒圣火教派以及烈焰玫瑰骑士团。
+									<br />
+									由于本身的性质，它拥有独特的猎巫技能，配合集结与二聚魔法镣铐特殊牌。
+									<br />
+									这副卡组从数字上看似乎很弱，但非常有攻击性。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/syndicate_azar_javed.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-syndicate">辛迪加 - 萨拉曼德拉</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">document.write(card_dict["sy_azar_javed"].name);</script><br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">document.write(calcDeckWeight(premade_deck[22]) + "（" + premade_deck[22].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");</script><br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">document.write(ability_dict["azar_javed"].description);</script><br />
+									<b>打法：</b> 围绕集结、焦炎和召唤复仇者展开。
+								</p>
+								<p>
+									这副卡组主要使用萨拉曼德拉组织。
+									<br />
+									它主要依靠大量焦炎单位，配合一些集结和召唤复仇者，因此也是一副极具攻击性的卡组。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/syndicate_cyprian_wiley.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-syndicate">辛迪加 - 诺维格瑞帮派</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["sy_cyprian_wiley"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[23]) + "（" + premade_deck[23].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["cyprian_wiley"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕间谍、紧密羁绊和集结展开。
+								</p>
+								<p>
+									这副卡组主要使用诺维格瑞的帮派（辛迪加的核心）。
+									<br />
+									它严重依赖大量间谍，以便让多组紧密羁绊单位发挥作用。
+								</p>
+							</div>
+						</div>
+					</div>
+					<a id = "zerrikania" />
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/zerrikania_zerrikanterment.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-zerrikania">泽瑞坎尼亚 - 巨龙教派</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["ze_zerrikanterment"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[24]) + "（" + premade_deck[24].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["zerrikanterment"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕朝拜者与被朝拜单位，以及医疗兵展开。
+								</p>
+								<p>
+									这副卡组主要使用泽瑞坎尼亚的巨龙教派。
+									<br />
+									它需要在场上配合巨龙和费瑟尔，才能发挥强大的加成。
+									<br />
+									由于巨龙本身就是强力单位，你既可以把它们全部集中在一回合内爆发，也可以分散到几个回合。
+									<br />
+									使用医疗兵可以让你在后续回合复活巨龙。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "pure-g">
+						<div class = "pure-u-1-8">
+							<img class = "pure-img-responsive card-preview" src = "images/sm/zerrikania_rarog.jpg" alt = "卡组领袖" />
+						</div>
+						<div class = "pure-u-7-8">
+							<div class = "deck-list-name faction-zerrikania">泽瑞坎尼亚 - 军团</div>
+							<div class = "deck-list-description">
+								<p>
+									<b>领袖：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(card_dict["ze_rarog"].name);
+									</script>
+									<br />
+									<b>卡组权重：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(calcDeckWeight(premade_deck[25]) + "（" + premade_deck[25].cards.reduce((a, e) => a + e[1], 0) + " 张牌）");
+									</script>
+									<br />
+									<b>领袖技能：</b>
+									<script type = "text/javascript" language= "JavaScript">
+										document.write(ability_dict["rarog"].description);
+									</script>
+									<br />
+									<b>打法：</b>
+									围绕激励、焦炎以及多种技能的组合展开。
+								</p>
+								<p>
+									这副卡组主要使用泽瑞坎尼亚的战斗单位与生物。
+									<br />
+									它的主要特色是自由战士，他们能相互提升。
+									<br />
+									这副卡组也拥有大多数技能的平衡搭配，尤其是焦炎和医疗兵。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
