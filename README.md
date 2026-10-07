@@ -2,7 +2,7 @@
 
 ![封面](https://user-images.githubusercontent.com/26311830/116256903-f1599b00-a7b6-11eb-84a1-16dcb5c9bfc6.jpg)
 
-本项目是基于 RandomPianist 的《昆特牌经典版》分叉版本修改而来。
+本项目是基于 RandomPianist 的《昆特牌经典版》分叉版本修改而来。然后对ia2904/gwent-classic-v3.5的原版本做汉化工作的产物。
 
 这是一款在浏览器中重制的《巫师 3：狂猎》原版昆特牌小游戏，包含全部 DLC 卡牌。<br/>点击 [这里](https://randompianist.github.io/gwent-classic-v3.1/) 开始游玩。
 
